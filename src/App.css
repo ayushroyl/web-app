@@ -1,38 +1,304 @@
-.App {
-  text-align: center;
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+.app-header {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  position: fixed;
+  z-index: 1000;
+  top: 0%;
+  right: 0%;
+  left: 0%;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #000;
+}
+
+.header-icons .icon {
+  font-size: 1.4rem;
+  margin-left: 1.5rem;
+  cursor: pointer;
+  color: #000;
+  transition: transform 0.3s ease;
+}
+
+.header-icons .icon:hover {
+  transform: scale(1.2);
+}
+
+/* Carousel Container */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.carousel-images {
+  display: flex;
+  width: 100%;
+  animation: slide 10s infinite;
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: transform 13s ease-in-out;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Container holding both buttons on top of the image */
+.booking-section {
+  position: absolute;
+  top: 70%; /* Adjust to position the buttons vertically on the image */
+  width: 100%; /* Make the section span the entire width */
+  z-index: 10;
+  display: flex;
+  justify-content: space-between; /* Pushes buttons to opposite sides */
+  align-items: center;
+}
+
+.booking-btn {
+  background-color: #00fbff6d; /* Adjust color as needed */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 21px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25D366;
+  padding: 15px; /* Slightly larger padding for the circular shape */
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.booking-btn:hover {
+  background-color: #ff4500;
+}
+/* Carousel Animation */
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0%); }
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Services Section */
+.services {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.service-btn {
+  background-color: #ff0266;
+  color: white;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 1rem 0;
+  min-width: 45%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.service-btn svg {
+  margin-right: 0.5rem;
+}
+
+.service-btn:hover {
+  background-color: #d81b60;
+  transform: scale(1.05);
+}
+
+/* Trending Services */
+.trending-services {
+  margin-bottom: 2rem;
+}
+
+.trending-services h2 {
+  font-size: 0.1rem;
+  font-weight: bold;
+  color: #00000073;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 1rem;
+}
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.book-btn {
+  background-color: #6200ea;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #3700b3;
+}
+
+/* Footer Tab Bar */
+.tab-bar {
+  background-color: #fff;
+  padding: 0.4rem 0;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.tab-icon {
+  background: none;
+  border: none;
+  color: #6200ea;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.tab-icon svg {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.tab-icon:hover {
+  color: #3700b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .app-header {
+      padding: 5px;
+      font-size: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .booking-btn {
+      font-size: 1rem;
+      padding: 0.8rem 1.5rem;
+  }
+
+  .service-btn {
+      font-size: 0.9rem;
+      padding: 0.8rem 1rem;
+      min-width: 100%;
+  }
+
+  .trending-services h2 {
+      font-size: 0.8rem;
+  }
+
+  .service-item {
+      padding: 0.8rem;
+  }
+
+  .book-btn {
+      font-size: 0.9rem;
+      padding: 0.3rem 0.8rem;
+  }
+
+  .tab-icon svg {
+      font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+      padding: 4rem;
+  }
+
+  .service-btn {
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      min-width: 30%;
+  }
+
+  .trending-services h2 {
+      font-size: 1.8rem;
+  }
+
+  .booking-btn {
+      font-size: 1.4rem;
+      padding: 1.2rem 3rem;
+  }
+
+  .tab-icon svg {
+      font-size: 1.8rem;
   }
 }
