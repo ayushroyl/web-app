@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f9;
+  background-color:lightgray;
   color: #333;
 }
 
@@ -92,7 +92,7 @@ body {
 }
 
 .booking-btn {
-  background-color: #00fbff6d; /* Adjust color as needed */
+  background-color: #00abe4a0; /* Adjust color as needed */
   color: white;
   padding: 10px 20px;
   border: none;
@@ -147,7 +147,7 @@ main {
 }
 
 .service-btn {
-  background-color: #ff0266;
+  background-color: #00abe4;
   color: white;
   padding: 1rem 1.5rem;
   border: none;

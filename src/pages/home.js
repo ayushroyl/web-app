@@ -21,13 +21,13 @@ const Home = () => {
             <div className="carousel">
                 <div className="carousel-images">
                     <div className="carousel-item">
-                        <img src="/images/img1.jpg"/>
+                        <img src="/images/img1.jpg" alt='img1'/>
                     </div>
                     <div className="carousel-item">
-                        <img src="images/img2.jpg"/>
+                        <img src="images/img2.jpg" alt='img2'/>
                     </div>
                     <div className="carousel-item">
-                        <img src="images/img3.jpg"/>
+                        <img src="images/img3.jpg" alt='img3'/>
                     </div>
                 </div>
                 <section className="booking-section">
@@ -40,8 +40,10 @@ const Home = () => {
                 <section className="services">
                     <Link to="/services">
                         <button className="service-btn"><FaBolt /> Quick Services</button>
+                        <button className="service-btn"><FaWrench /> All Services</button>
                     </Link>
-                    <button className="service-btn"><FaWrench /> All Services</button>
+                    <button className="service-btn">Flat Booking</button>
+                    <button className='service-btn'>Car Booking</button>
                 </section>
 
                 <section className="trending-services">
