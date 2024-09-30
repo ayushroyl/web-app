@@ -12,7 +12,7 @@ const Home = () => {
                 <div className="header-icons">
                     <FiMenu className="icon" />
                 </div>
-                <div className="logo"><img src="/images/logo.png" alt='logo'/></div>
+                <div className="logo">Service App</div>
                 <div className="header-icons">
                     <FiSearch className="icon" />
                 </div>
