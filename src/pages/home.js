@@ -32,7 +32,7 @@ const Home = () => {
                 </div>
                 <section className="booking-section">
                     <button className="booking-btn"><FaPhoneAlt /> Call for Fixing</button>
-                    <a href='wa.me/917255071097?text=hii_im_from_app' className='whatsapp-btn'><FaWhatsapp /></a>
+                    <a href='https://wa.me/917255071097?text=hii_im_from_app' className='whatsapp-btn'><FaWhatsapp /></a>
                 </section>
             </div>
 
