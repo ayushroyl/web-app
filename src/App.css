@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-weight: bold;
 }
 
 body {
@@ -60,7 +61,6 @@ body {
   width: 100%;
   height: 200px;
   overflow: hidden;
-  margin-bottom: 20px;
 }
 
 .carousel-images {
@@ -92,7 +92,7 @@ body {
 }
 
 .booking-btn {
-  background-color: #00abe4a0; /* Adjust color as needed */
+  background-color: #004ea2b7; /* Adjust color as needed */
   color: white;
   padding: 10px 20px;
   border: none;
@@ -134,41 +134,84 @@ body {
 /* Main Content */
 main {
   flex: 1;
-  padding: 2rem;
-  font-family: 'Poppins', sans-serif;
+  padding: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-bottom: 20px;
 }
-
-/* Services Section */
+/* Container for cards */
 .services {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-gap: 10px; /* Space between cards */
+  margin: 0;
 }
 
-.service-btn {
-  background-color: #00abe4;
-  color: white;
-  padding: 1rem 1.5rem;
-  border: none;
-  border-radius: 10px;
+/* Card style */
+.service-card {
   display: flex;
+  flex-direction: row; /* Image on left, content on right */
+  background-color: #f9f9f9;
+  border-radius: 15px; /* Smooth edges */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 150px; /* Ensures all cards are the same height */
+}
+
+/* Hover effect for cards */
+.service-card:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Image in the card */
+.service-img {
+  width: 50%; /* Takes half the card */
+  object-fit: cover; /* Ensures image scales properly */
+  height: 100%;
+}
+
+/* Content of the card */
+.service-content {
+  width: 50%; /* Takes half the card */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin: 1rem 0;
-  min-width: 45%;
-  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 10px;
+  background-color: #004ea2;
+  color: white;
 }
 
-.service-btn svg {
-  margin-right: 0.5rem;
+/* Icon inside the card */
+.service-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
-.service-btn:hover {
-  background-color: #d81b60;
-  transform: scale(1.05);
+/* Text inside the card */
+.service-content p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Remove link underline and styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr); /* Single column for mobile */
+  }
+  
+  .service-card {
+    height: 65px; /* Let cards resize naturally */
+  }
 }
 
 /* Trending Services */
@@ -182,6 +225,7 @@ main {
   color: #00000073;
   font-family: 'Roboto', sans-serif;
   margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 .service-item {
   display: flex;
@@ -195,7 +239,7 @@ main {
 }
 
 .book-btn {
-  background-color: #6200ea;
+  background-color: #004ea2;
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
